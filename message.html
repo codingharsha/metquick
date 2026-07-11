@@ -1,0 +1,204 @@
+Page: MetQuik Messages with Brand Logo
+
+```html
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetQuik Messages</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <style>
+    @import url('https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&f[]=inter@400,500,600,700&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0A0A0A;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-display {
+      font-family: 'Satoshi', sans-serif;
+    }
+
+    .glass {
+      background: rgba(26, 26, 26, 0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .active-tab {
+      color: #FF6B00;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="w-full h-screen flex flex-col bg-[#0A0A0A] text-white overflow-hidden">
+    
+    <!-- Header -->
+    <header class="shrink-0 pt-14 px-5 pb-4 flex flex-col gap-6 z-20">
+      <div class="flex justify-between items-center">
+        <a href="/preview/f0ee6955-95b5-45f8-9417-14b2f9e3bf5b" id="back-link" class="w-11 h-11 flex items-center justify-start">
+          <iconify-icon icon="lucide:arrow-left" class="text-2xl"></iconify-icon>
+        </a>
+        <div class="flex items-center gap-2">
+          <img src="https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/uploads/21aab6ac-b54e-4d90-9f63-30d1ef7f5b9c/1780980605561-7578a58f/Screenshot_2026-06-03_203534.png" class="h-10 w-auto object-contain" alt="MetQuik Logo">
+          <h1 class="text-lg font-display font-bold">Messages</h1>
+        </div>
+        <button id="compose-btn" class="w-11 h-11 flex items-center justify-end">
+          <iconify-icon icon="lucide:square-pen" class="text-2xl"></iconify-icon>
+        </button>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="relative">
+        <span class="absolute inset-y-0 left-4 flex items-center text-gray-500">
+          <iconify-icon icon="lucide:search" class="text-xl"></iconify-icon>
+        </span>
+        <input type="text" placeholder="Search messages..." class="w-full glass rounded-[20px] py-3.5 pl-11 pr-11 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[#FF6B00]/40">
+        <button class="absolute inset-y-0 right-4 flex items-center text-gray-500">
+          <iconify-icon icon="lucide:sliders-horizontal" class="text-lg"></iconify-icon>
+        </button>
+      </div>
+    </header>
+
+    <!-- Chat List -->
+    <main class="flex-1 overflow-y-auto px-5 pb-32 no-scrollbar space-y-3">
+      
+      <!-- Message Item 1 (Unread) -->
+      <a href="#" id="chat-arjun" class="flex items-center gap-4 glass rounded-[20px] p-4 transition-all active:scale-[0.98]">
+        <div class="relative">
+          <img src="https://i.pravatar.cc/100?u=arjun" alt="Arjun Sharma" class="w-14 h-14 rounded-full object-cover grayscale-[0.2]">
+          <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 rounded-full border-2 border-[#1A1A1A]"></span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex justify-between items-center mb-0.5">
+            <div class="flex items-center gap-2">
+              <h2 class="text-sm font-bold truncate">Arjun Sharma</h2>
+              <span class="bg-white/10 text-[9px] px-1.5 py-0.5 rounded-md font-bold text-gray-400 uppercase tracking-tighter">Mentor</span>
+            </div>
+            <span class="text-[10px] text-gray-500 font-medium">10:30 AM</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <p class="text-xs text-gray-300 truncate pr-4 font-medium">Hey Mikey, looking forward to our session tomorrow!</p>
+            <div class="w-2.5 h-2.5 bg-[#FF6B00] rounded-full shrink-0 shadow-[0_0_10px_rgba(255,107,0,0.5)]"></div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Message Item 2 -->
+      <a href="#" id="chat-priya" class="flex items-center gap-4 glass rounded-[20px] p-4 transition-all active:scale-[0.98]">
+        <div class="relative">
+          <img src="https://i.pravatar.cc/100?u=priya" alt="Priya Mehta" class="w-14 h-14 rounded-full object-cover grayscale-[0.2]">
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex justify-between items-center mb-0.5">
+            <div class="flex items-center gap-2">
+              <h2 class="text-sm font-bold truncate">Priya Mehta</h2>
+              <span class="bg-white/10 text-[9px] px-1.5 py-0.5 rounded-md font-bold text-gray-400 uppercase tracking-tighter">Mentor</span>
+            </div>
+            <span class="text-[10px] text-gray-500 font-medium">Yesterday</span>
+          </div>
+          <p class="text-xs text-gray-500 truncate">Thanks for joining the session. Here are the resources.</p>
+        </div>
+      </a>
+
+      <!-- Message Item 3 -->
+      <a href="#" id="chat-rohit" class="flex items-center gap-4 glass rounded-[20px] p-4 transition-all active:scale-[0.98]">
+        <div class="relative">
+          <img src="https://i.pravatar.cc/100?u=rohit" alt="Rohit Verma" class="w-14 h-14 rounded-full object-cover grayscale-[0.2]">
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex justify-between items-center mb-0.5">
+            <div class="flex items-center gap-2">
+              <h2 class="text-sm font-bold truncate">Rohit Verma</h2>
+              <span class="bg-white/10 text-[9px] px-1.5 py-0.5 rounded-md font-bold text-gray-400 uppercase tracking-tighter">Mentor</span>
+            </div>
+            <span class="text-[10px] text-gray-500 font-medium">Yesterday</span>
+          </div>
+          <p class="text-xs text-gray-500 truncate">Check out the document I shared with you.</p>
+        </div>
+      </a>
+
+      <!-- Message Item 4 -->
+      <a href="#" id="chat-neha" class="flex items-center gap-4 glass rounded-[20px] p-4 transition-all active:scale-[0.98]">
+        <div class="relative">
+          <img src="https://i.pravatar.cc/100?u=neha" alt="Neha Singh" class="w-14 h-14 rounded-full object-cover grayscale-[0.2]">
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex justify-between items-center mb-0.5">
+            <div class="flex items-center gap-2">
+              <h2 class="text-sm font-bold truncate">Neha Singh</h2>
+              <span class="bg-white/10 text-[9px] px-1.5 py-0.5 rounded-md font-bold text-gray-400 uppercase tracking-tighter">Mentor</span>
+            </div>
+            <span class="text-[10px] text-gray-500 font-medium">2d ago</span>
+          </div>
+          <p class="text-xs text-gray-500 truncate">Great progress on your portfolio!</p>
+        </div>
+      </a>
+
+      <!-- Message Item 5 -->
+      <a href="#" id="chat-vikram" class="flex items-center gap-4 glass rounded-[20px] p-4 transition-all active:scale-[0.98]">
+        <div class="relative">
+          <img src="https://i.pravatar.cc/100?u=vikram" alt="Vikram Patil" class="w-14 h-14 rounded-full object-cover grayscale-[0.2]">
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex justify-between items-center mb-0.5">
+            <div class="flex items-center gap-2">
+              <h2 class="text-sm font-bold truncate">Vikram Patil</h2>
+              <span class="bg-white/10 text-[9px] px-1.5 py-0.5 rounded-md font-bold text-gray-400 uppercase tracking-tighter">Mentor</span>
+            </div>
+            <span class="text-[10px] text-gray-500 font-medium">3d ago</span>
+          </div>
+          <p class="text-xs text-gray-500 truncate">Let me know if you have any questions.</p>
+        </div>
+      </a>
+
+    </main>
+
+    <!-- Bottom Navigation -->
+    <footer class="shrink-0 fixed bottom-0 left-0 right-0 glass border-t border-white/5 px-4 pb-[34px] pt-4 z-50" style="position: absolute; inset: 718px auto auto 0px; width: 376.533px; height: 95.1333px;">
+      <div class="flex justify-between items-center">
+        <a href="/preview/f0ee6955-95b5-45f8-9417-14b2f9e3bf5b" id="nav-home" class="flex flex-col items-center gap-1 text-gray-500 hover:text-white">
+          <iconify-icon icon="lucide:home" class="text-2xl"></iconify-icon>
+          <span class="text-[10px] font-bold">Home</span>
+        </a>
+        <a href="/preview/25138363-4999-4b43-9e5f-3bbdb7040348" id="nav-find" class="flex flex-col items-center gap-1 text-gray-500 hover:text-white">
+          <iconify-icon icon="lucide:search" class="text-2xl"></iconify-icon>
+          <span class="text-[10px] font-bold">Find</span>
+        </a>
+        <a href="/preview/c11cf0af-67f2-41ef-80ae-bcdc833dd69c" id="nav-community" class="flex flex-col items-center gap-1 text-gray-500 hover:text-white">
+          <iconify-icon icon="lucide:users-2" class="text-2xl"></iconify-icon>
+          <span class="text-[10px] font-bold">Community</span>
+        </a>
+        <a href="/preview/329805ed-2c16-418a-91b8-8290392d4b36" id="nav-sessions" class="flex flex-col items-center gap-1 text-gray-500 hover:text-white">
+          
+          
+        </a>
+        <a href="#" id="nav-messages" class="flex flex-col items-center gap-1 active-tab">
+          <iconify-icon icon="lucide:message-square-text" class="text-2xl"></iconify-icon>
+          <span class="text-[10px] font-bold">Messages</span>
+        </a>
+        <a href="/preview/721f6d4c-9509-49f8-b3fa-970d1faa075f" id="nav-profile" class="flex flex-col items-center gap-1 text-gray-500 hover:text-white">
+          <iconify-icon icon="lucide:user" class="text-2xl"></iconify-icon>
+          <span class="text-[10px] font-bold">Profile</span>
+        </a>
+      </div>
+    </footer>
+
+  </div>
+
+</body></html>
+```
+
+Please reference this design and implement it into our codebase; Try to understand the structure, which part of our codebase is relevant and implement

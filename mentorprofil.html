@@ -1,0 +1,271 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetQuik - Mentor Profile</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B0B0B;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="w-full h-screen bg-[#0B0B0B] text-white flex flex-col">
+
+        <!-- Header -->
+        <header class="pt-14 px-5 pb-4 flex justify-between items-center">
+
+            <div class="flex items-center gap-4">
+
+                <!-- Logo -->
+                <a href="/" class="flex items-center">
+                    <img
+                        src="https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/uploads/21aab6ac-b54e-4d90-9f63-30d1ef7f5b9c/1780980605561-7578a58f/Screenshot_2026-06-03_203534.png"
+                        alt="MetQuik Logo"
+                        class="h-10 w-auto rounded-lg object-contain"
+                    >
+                </a>
+
+                <!-- Back Button -->
+                <button class="w-10 h-10 flex items-center justify-center bg-[#1A1A1A] rounded-full border border-[#242424]">
+                    <iconify-icon icon="lucide:arrow-left" class="text-xl"></iconify-icon>
+                </button>
+
+            </div>
+
+            <div class="flex gap-4">
+
+                <!-- Share Button -->
+                <button class="w-10 h-10 flex items-center justify-center bg-[#1A1A1A] rounded-full border border-[#242424]">
+                    <iconify-icon icon="lucide:share-2" class="text-xl"></iconify-icon>
+                </button>
+
+                <!-- More Button -->
+                <button class="w-10 h-10 flex items-center justify-center bg-[#1A1A1A] rounded-full border border-[#242424]">
+                    <iconify-icon icon="lucide:more-horizontal" class="text-xl"></iconify-icon>
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto px-5 pb-[120px]">
+
+            <!-- Profile Section -->
+            <section class="mt-4">
+
+                <!-- Profile Image -->
+                <div class="relative h-64 rounded-3xl overflow-hidden bg-[#1A1A1A]">
+
+                    <!-- Online Status -->
+                    <div class="absolute top-4 left-4 z-10 bg-black/40 backdrop-blur-md border border-white/10 px-3 py-1.5 rounded-full flex items-center gap-2">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider">
+                            Online
+                        </span>
+                    </div>
+
+                    <img
+                        src="https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/uploads/21aab6ac-b54e-4d90-9f63-30d1ef7f5b9c/1780755585561-3946103b/image.png"
+                        alt="Mentor"
+                        class="w-full h-full object-cover"
+                    >
+                </div>
+
+                <!-- Mentor Details -->
+                <div class="mt-6 space-y-4">
+
+                    <!-- Name -->
+                    <div class="flex items-center gap-2">
+                        <h1 class="text-2xl font-bold">
+                            Arjun Sharma
+                        </h1>
+
+                        <iconify-icon
+                            icon="mdi:check-decagram"
+                            class="text-[#FF6B00] text-xl">
+                        </iconify-icon>
+                    </div>
+
+                    <!-- Designation -->
+                    <p class="text-gray-400 text-sm">
+                        Product Designer @ Google
+                    </p>
+
+                    <!-- Location & Experience -->
+                    <div class="flex flex-wrap gap-4">
+
+                        <div class="flex items-center gap-2 text-gray-400">
+                            <iconify-icon
+                                icon="lucide:map-pin"
+                                class="text-[#FF6B00]">
+                            </iconify-icon>
+
+                            <span class="text-xs font-medium">
+                                Bengaluru, India
+                            </span>
+                        </div>
+
+                        <div class="flex items-center gap-2 text-gray-400">
+                            <iconify-icon
+                                icon="lucide:briefcase"
+                                class="text-[#FF6B00]">
+                            </iconify-icon>
+
+                            <span class="text-xs font-medium">
+                                10+ Years Experience
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="flex gap-6">
+
+                        <div class="flex items-center gap-1">
+                            <iconify-icon
+                                icon="lucide:star"
+                                class="text-yellow-500">
+                            </iconify-icon>
+
+                            <span class="font-bold">4.9</span>
+
+                            <span class="text-xs text-gray-500">
+                                (120 reviews)
+                            </span>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <iconify-icon
+                                icon="lucide:users-2"
+                                class="text-[#FF6B00]">
+                            </iconify-icon>
+
+                            <span class="font-bold">
+                                250+ Sessions
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="space-y-3">
+
+                        <button class="w-full bg-[#FF6B00] hover:bg-[#E56000] py-4 rounded-2xl font-bold flex justify-center items-center gap-2 transition">
+
+                            <iconify-icon
+                                icon="lucide:calendar"
+                                class="text-xl">
+                            </iconify-icon>
+
+                            Book Session
+
+                        </button>
+
+                        <div class="flex gap-3">
+
+                            <button class="flex-1 border border-[#242424] py-3.5 rounded-2xl flex justify-center items-center gap-2">
+
+                                <iconify-icon icon="lucide:message-square"></iconify-icon>
+
+                                Message
+                            </button>
+
+                            <button class="flex-1 border border-[#242424] py-3.5 rounded-2xl flex justify-center items-center gap-2">
+
+                                <iconify-icon icon="lucide:bookmark"></iconify-icon>
+
+                                Save
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Tabs -->
+            <section class="mt-10 border-b border-[#242424] -mx-5 px-5">
+
+                <div class="flex gap-8 overflow-x-auto no-scrollbar">
+
+                    <button class="pb-4 border-b-2 border-[#FF6B00] text-[#FF6B00] font-bold">
+                        About
+                    </button>
+
+                    <button class="pb-4 text-gray-500 font-bold">
+                        Experience
+                    </button>
+
+                    <button class="pb-4 text-gray-500 font-bold flex items-center gap-2">
+                        Content
+
+                        <span class="bg-[#FF6B00] text-[8px] px-1.5 py-0.5 rounded uppercase">
+                            New
+                        </span>
+                    </button>
+
+                    <button class="pb-4 text-gray-500 font-bold">
+                        Reviews
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- About Section -->
+            <section class="mt-8">
+
+                <h2 class="text-lg font-bold mb-4">
+                    About Me
+                </h2>
+
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Passionate product designer with 10+ years of experience
+                    in building user-centric digital products that solve real
+                    problems. Currently designing for Google's core products,
+                    focusing on accessibility, scalability, and delightful
+                    user experiences.
+                </p>
+
+                <button class="mt-2 text-[#FF6B00] font-bold text-sm">
+                    Read More
+                </button>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
+```

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>rating.html</title>
+</head>
+<body>
+<!-- Mentor Reviews Page -->
+<div class="w-full h-screen flex flex-col bg-[#0A0A0A]">
+
+    <!-- Header -->
+    <header class="shrink-0 pt-14 px-5 pb-2 flex flex-col gap-4">
+
+        <div class="flex justify-between items-center">
+
+            <a
+                href="#"
+                id="header-back-link"
+                class="w-10 h-10 flex items-center justify-start text-white"
+            >
+                <iconify-icon
+                    icon="lucide:arrow-left"
+                    class="text-2xl"
+                ></iconify-icon>
+            </a>
+
+            <h1 class="text-lg font-display font-bold">
+                Arjun Sharma
+            </h1>
+
+            <button
+                id="header-menu-btn"
+                class="w-10 h-10 flex items-center justify-end text-white"
+            >
+                <iconify-icon
+                    icon="lucide:more-horizontal"
+                    class="text-2xl"
+                ></iconify-icon>
+            </button>
+
+        </div>
+
+        <!-- Tabs -->
+        <div class="flex border-b border-white/5">
+
+            <a
+                href="#"
+                id="tab-experience-link"
+                class="flex-1 py-3 text-center text-sm font-medium text-gray-500"
+            >
+                Experience
+            </a>
+
+            <a
+                href="#"
+                id="tab-content-link"
+                class="flex-1 py-3 text-center text-sm font-medium text-gray-500 flex items-center justify-center gap-1.5"
+            >
+                Content
+
+                <span class="text-[8px] bg-[#FF6B00] text-white px-1.5 py-0.5 rounded uppercase font-bold tracking-tighter">
+                    NEW
+                </span>
+            </a>
+
+            <a
+                href="#"
+                id="tab-reviews-link"
+                class="flex-1 py-3 text-center text-sm font-bold text-[#FF6B00] relative"
+            >
+                Reviews
+
+                <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-[#FF6B00] rounded-full"></div>
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto px-5 py-6 no-scrollbar pb-32">
+
+        <!-- Rating Summary -->
+        <section class="glass rounded-[20px] p-6 flex flex-col gap-6">
+
+            <div class="flex items-start justify-between">
+
+                <div class="flex flex-col gap-1">
+
+                    <span class="text-6xl font-display font-bold tracking-tight">
+                        4.9
+                    </span>
+
+                    <div class="flex items-center gap-0.5 mt-1">
+                        <iconify-icon icon="material-symbols:star" class="text-yellow-400 text-lg"></iconify-icon>
+                        <iconify-icon icon="material-symbols:star" class="text-yellow-400 text-lg"></iconify-icon>
+                        <iconify-icon icon="material-symbols:star" class="text-yellow-400 text-lg"></iconify-icon>
+                        <iconify-icon icon="material-symbols:star" class="text-yellow-400 text-lg"></iconify-icon>
+                        <iconify-icon icon="material-symbols:star" class="text-yellow-400 text-lg"></iconify-icon>
+                    </div>
+
+                    <span class="text-xs text-gray-400 font-medium mt-1">
+                        (120 Reviews)
+                    </span>
+
+                </div>
+
+                <!-- Rating Distribution -->
+                <div class="flex-1 max-w-[160px] flex flex-col gap-2.5">
+
+                    <div class="flex items-center gap-3">
+                        <span class="text-[10px] text-gray-400 font-bold w-4">5 ★</span>
+
+                        <div class="flex-1 rating-bar">
+                            <div class="rating-bar-fill w-[92%]"></div>
+                        </div>
+
+                        <span class="text-[10px] text-gray-500 w-8 text-right font-medium">
+                            92%
+                        </span>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <span class="text-[10px] text-gray-400 font-bold w-4">4 ★</span>
+
+                        <div class="flex-1 rating-bar">
+                            <div class="rating-bar-fill w-[6%]"></div>
+                        </div>
+
+                        <span class="text-[10px] text-gray-500 w-8 text-right font-medium">
+                            6%
+                        </span>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <span class="text-[10px] text-gray-400 font-bold w-4">3 ★</span>
+
+                        <div class="flex-1 rating-bar">
+                            <div class="rating-bar-fill w-[2%]"></div>
+                        </div>
+
+                        <span class="text-[10px] text-gray-500 w-8 text-right font-medium">
+                            2%
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Student Reviews -->
+        <section class="mt-8 space-y-5">
+
+            <div class="flex justify-between items-end mb-4">
+
+                <h2 class="text-lg font-display font-bold">
+                    Student Reviews
+                </h2>
+
+                <a
+                    href="#"
+                    class="text-xs font-bold text-[#FF6B00]"
+                >
+                    View all
+                </a>
+
+            </div>
+
+            <!-- Review Card -->
+            <div class="glass rounded-[20px] p-5 flex flex-col gap-4">
+
+                <div class="flex items-center gap-3">
+
+                    <img
+                        src="https://i.pravatar.cc/100?u=rohan"
+                        alt="Rohan Mehta"
+                        class="w-11 h-11 rounded-full object-cover"
+                    >
+
+                    <div class="flex-1">
+
+                        <div class="flex justify-between items-center">
+
+                            <h3 class="font-bold text-sm">
+                                Rohan Mehta
+                            </h3>
+
+                            <div class="flex items-center gap-1">
+                                <iconify-icon
+                                    icon="material-symbols:star"
+                                    class="text-yellow-400 text-xs"
+                                ></iconify-icon>
+
+                                <span class="text-xs font-bold">
+                                    5.0
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <p class="text-[11px] text-gray-400">
+                            Product Designer @ Microsoft
+                            •
+                            <span class="text-gray-500">
+                                2 weeks ago
+                            </span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="text-sm text-gray-300 leading-relaxed">
+                    Arjun sir's mentorship helped me crack my dream role at Microsoft! His feedback on my portfolio was super detailed and helped me land my first job.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Write Review Button -->
+    <footer class="shrink-0 px-5 pb-32 pt-4 bg-[#0A0A0A] border-t border-white/5">
+
+        <button
+            id="cta-write-review-btn"
+            class="w-full bg-transparent border border-[#FF6B00] text-[#FF6B00] font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
+        >
+            Write a Review
+        </button>
+
+    </footer>
+
+</div>
+</body>
+</html>

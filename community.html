@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" 
+        rel="stylesheet"
+    >
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B0B0B;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+        }
+
+        .active-tab {
+            color: #FF6B00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w-full h-screen flex flex-col bg-[#0B0B0B] text-white">
+
+        <!-- Header -->
+        <header class="shrink-0 pt-14 px-5 pb-4 flex justify-between items-center">
+
+            <div class="flex items-center gap-4">
+
+                <a
+                    id="nav-back-button"
+                    href="https://f0ee6955-95b5-45f8-9417-14b2f9e3bf5b.preview.superdesign.dev"
+                    class="w-11 h-11 flex items-center justify-center bg-[#1A1A1A] rounded-full border border-[#242424] active:scale-95 transition-transform"
+                >
+                    <iconify-icon
+                        icon="lucide:arrow-left"
+                        class="text-xl text-white"
+                    ></iconify-icon>
+                </a>
+
+                <div class="flex items-center gap-3">
+                    <img
+                        src="https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/uploads/21aab6ac-b54e-4d90-9f63-30d1ef7f5b9c/1780980605561-7578a58f/Screenshot_2026-06-03_203534.png"
+                        alt="MetQuik Logo"
+                        class="h-10 w-auto object-contain"
+                    >
+
+                    <h1 class="text-lg font-bold tracking-tight">
+                        Sessions
+                    </h1>
+                </div>
+
+            </div>
+
+            <button
+                id="nav-options-button"
+                class="w-11 h-11 flex items-center justify-center bg-[#1A1A1A] rounded-full border border-[#242424] active:scale-95 transition-transform"
+            >
+                <iconify-icon
+                    icon="lucide:more-vertical"
+                    class="text-xl text-white"
+                ></iconify-icon>
+            </button>
+
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto px-5 pb-8">
+
+            <!-- Session Filters -->
+            <nav class="flex gap-2 overflow-x-auto no-scrollbar mb-8 mt-2">
+
+                <button
+                    id="filter-upcoming"
+                    class="shrink-0 h-10 px-6 bg-[#FF6B00] text-white text-[13px] font-bold rounded-full"
+                >
+                    Upcoming
+                </button>
+
+                <button
+                    id="filter-completed"
+                    class="shrink-0 h-10 px-6 bg-[#1A1A1A] border border-[#242424] text-[#A0A0A0] text-[13px] font-bold rounded-full"
+                >
+                    Completed
+                </button>
+
+                <button
+                    id="filter-cancelled"
+                    class="shrink-0 h-10 px-6 bg-[#1A1A1A] border border-[#242424] text-[#A0A0A0] text-[13px] font-bold rounded-full"
+                >
+                    Cancelled
+                </button>
+
+            </nav>
+
+            <!-- Upcoming Sessions -->
+            <section class="space-y-4 mb-10">
+
+                <!-- Today -->
+                <div>
+
+                    <h2 class="text-base font-bold mb-4">
+                        Today
+                    </h2>
+
+                    <div class="bg-[#1A1A1A] border border-[#242424] rounded-2xl p-4 flex flex-col gap-5 card-shadow">
+
+                        <div class="flex items-center gap-4">
+
+                            <img
+                                src="https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/uploads/21aab6ac-b54e-4d90-9f63-30d1ef7f5b9c/1780755219791-38a5e2c9/Screenshot_2026-06-06_190004.png"
+                                class="w-12 h-12 rounded-full object-cover"
+                                alt="Arjun Sharma"
+                            >
+
+                            <div class="flex-1">
+                                <h3 class="text-[14px] font-bold leading-tight">
+                                    Arjun Sharma
+                                </h3>
+
+                                <p class="text-[#A0A0A0] text-[12px] mt-0.5">
+                                    Design Systems & Scaling
+                                </p>
+                            </div>
+
+                            <div class="bg-[#FF6B00]/10 text-[#FF6B00] px-3 py-1 rounded-full text-[10px] font-bold tracking-wider">
+                                IN 2 HOURS
+                            </div>
+
+                        </div>
+
+                        <div class="flex justify-between items-center bg-[#0B0B0B] rounded-xl p-3 border border-[#242424]">
+
+                            <div class="flex items-center gap-2">
+                                <iconify-icon
+                                    icon="lucide:calendar"
+                                    class="text-[#FF6B00] text-sm"
+                                ></iconify-icon>
+
+                                <span class="text-[11px] font-medium">
+                                    Today, 4:00 PM
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <iconify-icon
+                                    icon="lucide:clock"
+                                    class="text-[#FF6B00] text-sm"
+                                ></iconify-icon>
+
+                                <span class="text-[11px] font-medium">
+                                    60 Minutes
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <button
+                            id="join-session-arjun"
+                            class="w-full bg-[#FF6B00] hover:bg-[#E56000] text-white text-[14px] font-bold h-12 rounded-full active:scale-[0.98] transition-all"
+                        >
+                            Join Session
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Footer Navigation -->
+        <footer class="shrink-0 pb-[34px] bg-[#0B0B0B] border-t border-[#1A1A1A] px-6 pt-4 z-50">
+
+            <div class="flex justify-between items-center">
+
+                <a
+                    id="footer-home-link"
+                    href="#"
+                    class="flex flex-col items-center gap-1 text-[#A0A0A0]"
+                >
+                    <iconify-icon
+                        icon="lucide:home"
+                        class="text-2xl"
+                    ></iconify-icon>
+
+                    <span class="text-[10px] font-semibold">
+                        Home
+                    </span>
+                </a>
+
+                <a
+                    id="footer-find-link"
+                    href="#"
+                    class="flex flex-col items-center gap-1 text-[#A0A0A0]"
+                >
+                    <iconify-icon
+                        icon="lucide:search"
+                        class="text-2xl"
+                    ></iconify-icon>
+
+                    <span class="text-[10px] font-semibold">
+                        Find
+                    </span>
+                </a>
+
+                <a
+                    id="footer-community-link"
+                    href="#"
+                    class="flex flex-col items-center gap-1 text-[#A0A0A0]"
+                >
+                    <iconify-icon
+                        icon="lucide:users"
+                        class="text-2xl"
+                    ></iconify-icon>
+
+                    <span class="text-[10px] font-semibold">
+                        Community
+                    </span>
+                </a>
+
+                <a
+                    id="footer-sessions-link"
+                    href="#"
+                    class="flex flex-col items-center gap-1 text-[#FF6B00]"
+                >
+                    <iconify-icon
+                        icon="lucide:video"
+                        class="text-2xl"
+                    ></iconify-icon>
+
+                    <span class="text-[10px] font-semibold">
+                        Sessions
+                    </span>
+                </a>
+
+                <a
+                    id="footer-profile-link"
+                    href="#"
+                    class="flex flex-col items-center gap-1 text-[#A0A0A0]"
+                >
+                    <iconify-icon
+                        icon="lucide:user"
+                        class="text-2xl"
+                    ></iconify-icon>
+
+                    <span class="text-[10px] font-semibold">
+                        Profile
+                    </span>
+                </a>
+
+            </div>
+
+        </footer>
+
+    </div>
+</body>
+</html>
