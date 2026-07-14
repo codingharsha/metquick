@@ -1,6 +1,13 @@
 import Link from "next/link";
 import Icon from "@/components/Icon";
 
+const rightIconLabels = {
+  bell: "Notifications",
+  settings: "Settings",
+  message: "Messages",
+  more: "More options",
+};
+
 export default function Header({
   title,
   subtitle,
@@ -48,7 +55,7 @@ export default function Header({
             <Icon name={rightIcon} />
           </Link>
         ) : (
-          <button className="icon-btn" aria-label="Open action">
+          <button className="icon-btn" aria-label={rightIconLabels[rightIcon] ?? "Open action"}>
             <Icon name={rightIcon} />
           </button>
         )}

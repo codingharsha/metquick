@@ -59,7 +59,7 @@ export default function HomePage() {
           </div>
           <div className="h-scroll">
             {mentors.map((mentor) => (
-              <Link key={mentor.slug} href={mentor.slug === "arjun-sharma" ? "/mentor/arjun-sharma" : "/find-mentors"} className="mentor-card" style={{ minWidth: 220 }}>
+              <Link key={mentor.slug} href={`/mentor/${mentor.slug}`} className="mentor-card" style={{ minWidth: 220 }}>
                 <img src={mentor.image} alt={mentor.name} className="avatar round" />
                 <div style={{ marginTop: 14, fontWeight: 800 }}>{mentor.name}</div>
                 <div className="muted" style={{ fontSize: 12, marginTop: 4 }}>{mentor.role}</div>
@@ -73,35 +73,65 @@ export default function HomePage() {
         </div>
 
         <div className="card">
-          <div className="section-head" style={{ marginBottom: 14 }}>
-            <strong>Trending Now</strong>
-            <span className="eyebrow">Shorts</span>
+  <div className="section-head" style={{ marginBottom: 18 }}>
+    <strong>Trending Now</strong>
+    <span className="eyebrow">SHORTS</span>
+  </div>
+
+  <div className="list" style={{ gap: 18 }}>
+    {[
+      ["How to land your first PM role", "3:24"],
+      ["5 Figma mistakes juniors still make", "4:18"],
+      ["Cracking system design interviews", "6:05"],
+    ].map(([title, duration]) => (
+      <div
+        key={title}
+        className="row"
+        style={{
+          gap: 14,
+          alignItems: "center",
+        }}
+      >
+        <div
+          style={{
+            width: 46,
+            height: 46,
+            borderRadius: 14,
+            background: "rgba(255,107,0,0.14)",
+            display: "grid",
+            placeItems: "center",
+            color: "var(--orange)",
+            flexShrink: 0,
+          }}
+        >
+          <Icon name="play" size={17} />
+        </div>
+
+        <div style={{ flex: 1 }}>
+          <div
+            style={{
+              fontSize: 13,
+              fontWeight: 600,
+              lineHeight: 1.3,
+            }}
+          >
+            {title}
           </div>
-          <div className="list">
-            {[
-              "How to land your first PM role",
-              "5 Figma mistakes juniors still make",
-              "Cracking system design interviews",
-            ].map((item) => (
-              <div key={item} className="row" style={{ gap: 12 }}>
-                <div
-                  style={{
-                    width: 42,
-                    height: 42,
-                    borderRadius: 16,
-                    background: "rgba(255, 107, 0, 0.14)",
-                    display: "grid",
-                    placeItems: "center",
-                    color: "var(--orange)",
-                  }}
-                >
-                  <Icon name="play" size={16} />
-                </div>
-                <div style={{ fontSize: 14, lineHeight: 1.4 }}>{item}</div>
-              </div>
-            ))}
+
+          <div
+            className="muted"
+            style={{
+              fontSize: 11,
+              marginTop: 4,
+            }}
+          >
+            {duration}
           </div>
         </div>
+      </div>
+    ))}
+  </div>
+</div>
       </section>
     </AppShell>
   );

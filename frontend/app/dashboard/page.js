@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function DashboardPage() {
   return (
-    <AppShell activeNav="/">
+    <AppShell activeNav="">
       <Header title="Welcome back, Mikey" subtitle="Your dashboard route mirrors the richer student dashboard prototype." rightHref="/profile" />
 
       <div className="search">
@@ -116,7 +116,7 @@ export default function DashboardPage() {
               </div>
               <div className="row" style={{ gap: 10, marginTop: 16 }}>
                 <button className="btn btn-secondary" style={{ flex: 1, padding: "12px 16px" }}>Follow</button>
-                <Link href="/mentor/arjun-sharma" className="btn btn-primary" style={{ padding: "12px 18px" }}>
+                <Link href={`/mentor/${mentor.slug}`} className="btn btn-primary" style={{ padding: "12px 18px" }}>
                   Book
                 </Link>
               </div>
