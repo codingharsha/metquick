@@ -17,6 +17,12 @@ export const mentors = [
     price: "$45 / hr",
     availability: "Available Today",
     tags: ["Design Systems", "Scaling", "Portfolio"],
+    location: "Bengaluru, India",
+    experience: "10+ Years Experience",
+    sessionsCount: "250+ Sessions",
+    reviewCount: "120 reviews",
+    about:
+      "Passionate product designer with a decade of experience building user-centric systems, mentorship programs, and scalable digital products.",
   },
   {
     slug: "michael-chen",
@@ -28,6 +34,12 @@ export const mentors = [
     price: "$60 / hr",
     availability: "Available Now",
     tags: ["System Design", "Architecture"],
+    location: "San Francisco, USA",
+    experience: "12+ Years Experience",
+    sessionsCount: "300+ Sessions",
+    reviewCount: "98 reviews",
+    about:
+      "Staff engineer focused on distributed systems and large-scale architecture, helping engineers prep for system design interviews and level up to senior roles.",
   },
   {
     slug: "anna-volkov",
@@ -39,6 +51,12 @@ export const mentors = [
     price: "$55 / hr",
     availability: "Available Mon",
     tags: ["Figma", "Design Systems"],
+    location: "Berlin, Germany",
+    experience: "8+ Years Experience",
+    sessionsCount: "180+ Sessions",
+    reviewCount: "76 reviews",
+    about:
+      "Visual designer specializing in design systems and brand-consistent UI at scale, mentoring designers on Figma workflows and portfolio storytelling.",
   },
 ];
 
