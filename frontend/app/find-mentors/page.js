@@ -6,4 +6,3 @@ export const metadata = {
 
 export default function FindMentorsPage() {
   return <MentorSearch />;
-}
