@@ -14,6 +14,7 @@ export default function Header({
   backHref,
   rightIcon = "bell",
   rightHref,
+  loginHref,
   centered = false,
 }) {
   return (
@@ -50,7 +51,11 @@ export default function Header({
           )}
         </div>
 
-        {rightHref ? (
+        {loginHref ? (
+          <Link href={loginHref} className="btn btn-secondary" style={{ padding: "8px 16px" }}>
+            Login
+          </Link>
+        ) : rightHref ? (
           <Link href={rightHref} className="icon-btn" aria-label={title ?? "Open action"}>
             <Icon name={rightIcon} />
           </Link>

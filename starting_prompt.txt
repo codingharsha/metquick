@@ -1,0 +1,14 @@
+Read all the .md files completely before doing anything.
+
+Understand the entire project context, coding standards, and objectives.
+
+From now on, treat this as a long-term production project.
+
+Whenever you make changes:
+- Explain your reasoning.
+- Prefer reusable components.
+- Preserve the client's UI.
+- Avoid unnecessary dependencies.
+- Think like a senior software architect.
+
+Before implementing any feature, briefly explain the plan.

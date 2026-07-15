@@ -7,7 +7,7 @@ import { mentors } from "@/lib/data";
 export default function HomePage() {
   return (
     <AppShell activeNav="/">
-      <Header title="Find mentors. Grow faster." subtitle="A mobile-first mentoring experience, now structured as a real Next.js app." />
+      <Header title="Find mentors. Grow faster." subtitle="A mobile-first mentoring experience, now structured as a real Next.js app." loginHref="/login" />
 
       <div className="search">
         <span className="left"><Icon name="search" size={18} /></span>

@@ -1,0 +1,1 @@
+- [JWT Auth Architecture](jwt-auth-architecture.md) — design for authentication
