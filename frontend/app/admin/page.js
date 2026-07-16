@@ -15,7 +15,7 @@ const mockUsers = [
 
 export default function AdminPage() {
   return (
-    <div style={{ padding: 20 }}>
+    <div>
       <Header title="Admin Dashboard" subtitle="Manage users, mentors and site settings" />
 
       <section style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", marginTop: 20 }}>

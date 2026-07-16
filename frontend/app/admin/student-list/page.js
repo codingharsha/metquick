@@ -4,10 +4,6 @@ import { useMemo, useState } from "react";
 import Header from "@/components/Header";
 import Icon from "@/components/Icon";
 
-export const metadata = {
-	title: "Student List | Admin — MetQuick",
-};
-
 const mockStudents = [
 	{ id: "s1", name: "Maya Rao", email: "maya@example.com", enrolled: "2024-09-01", lastLogin: "2h ago", status: "active", sessions: 5 },
 	{ id: "s2", name: "Liam Carter", email: "liam@example.com", enrolled: "2025-01-12", lastLogin: "1d ago", status: "active", sessions: 2 },
@@ -24,7 +20,7 @@ export default function StudentListPage() {
 	const [msg, setMsg] = useState("");
 
 	const filtered = useMemo(() => {
-		return students.filter((s) => {url 
+		return students.filter((s) => {
 			if (filter === "active" && s.status !== "active") return false;
 			if (filter === "suspended" && s.status !== "suspended") return false;
 			if (!query) return true;
@@ -53,7 +49,7 @@ export default function StudentListPage() {
 	}, [students]);
 
 	return (
-		<div style={{ padding: 20 }}>
+		<div>
 			<Header title="Students" subtitle="Monitor enrolled students and manage access" />
 
 			<section style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", marginTop: 12 }}>

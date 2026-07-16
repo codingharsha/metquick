@@ -42,7 +42,7 @@ export default function MentorEditPage() {
 	}
 
 	return (
-		<div style={{ padding: 20 }}>
+		<div>
 			<Header title="Mentor Editor" subtitle="Review and edit mentor profiles" />
 
 			<div style={{ display: "grid", gridTemplateColumns: "320px 1fr", gap: 18, marginTop: 20 }}>

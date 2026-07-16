@@ -5,9 +5,6 @@ import Header from "@/components/Header";
 import Icon from "@/components/Icon";
 import { mentors as initialMentors } from "@/lib/data";
 
-export const metadata = {
-	title: "Mentor Applications | Admin — MetQuick",
-};
 
 const initialApplications = [
 	{
